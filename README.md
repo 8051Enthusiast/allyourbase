@@ -19,7 +19,7 @@ Parameters
 
 ```
 -n N             the minimum length of strings to look for, in unicode codepoints
--l L             the length of pointers to look for, in bytes (4 = 32-bit pointers
+-l L             the length of pointers to look for, in bytes (4 = 32-bit pointers)
 -e {little,big}  the endianness of the pointers
 -a A             the alignment of the pointers (defaults to pointer lengths)
 -f F             slack factor (higher = slower and more memory but more accurate)

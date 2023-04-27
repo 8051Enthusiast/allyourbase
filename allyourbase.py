@@ -93,7 +93,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "-n", help="the minimum length of strings to look for, in unicode codepoints", type=int, default=5)
     parser.add_argument(
-        "-l", help="the length of pointers to look for, in bytes (4 = 32-bit pointers", type=int, default=8)
+        "-l", help="the length of pointers to look for, in bytes (4 = 32-bit pointers)", type=int, required=True)
     parser.add_argument("-e", help="the endianness of the pointers",
                         choices=["little", "big"], default="little")
     parser.add_argument(
