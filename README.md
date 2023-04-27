@@ -35,7 +35,7 @@ That way, one can simply choose the base address that has the highest overlap.
 
 However that approach is not really usable on 64-bit address spaces without changes, and it quickly gets slower with more string addresses.
 
-One useful realization is that "counting the overlap between to sets for each possible relative offset" is the same as doing the cross-correlation of the indicator vectors of the sets.
+One useful realization is that "counting the overlap between two sets for each possible relative offset" is the same as doing the cross-correlation of the indicator vectors of the sets.
 This can be efficiently implemented using the fast fourier transform by the convolution theorem.
 Still you would have to do a fourier transform the size of the address space which in most cases is infeasable.
 
