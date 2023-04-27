@@ -71,7 +71,7 @@ def find_max_overlap(A: set[int], B: set[int], modulos: list[int]) -> int:
             a[x % p] += 1
         for x in B:
             # reverse B to turn cross-correlation into convolution
-            b[(p - x % p) % p] += 1
+            b[-(x % p)] += 1
         # circular convolution of size p (per convolution theorem)
         corr = np.fft.ifft(np.fft.fft(a) * np.fft.fft(b)).real
         offset = int(np.argmax(corr))
