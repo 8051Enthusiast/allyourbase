@@ -5,6 +5,9 @@ allyourbase
 
 It works with arbritrary pointer sizes and endianness efficiently on decently sized firmware images (in the 10s of MBs, mostly limited by required RAM which grows linearly with filesize but has a high constant factor).
 
+The script is made to be simple so that it is easy to modify it to use one's own heuristic.
+For example, one could modify it to correlate target addresses of absolute calls with addresses of return instructions (since the instruction after it would often begin a new function (except on function where functions are typically aligned)).
+
 Example
 -------
 ```
